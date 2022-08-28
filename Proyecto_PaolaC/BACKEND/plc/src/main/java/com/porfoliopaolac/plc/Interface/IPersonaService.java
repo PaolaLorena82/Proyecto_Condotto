@@ -22,7 +22,7 @@ public interface IPersonaService {
     
     public void deletePersona (Long id);
     
-    //encontrar perona//
+    //encontrar persona//
     
     public Persona findPersona (Long  id);
     

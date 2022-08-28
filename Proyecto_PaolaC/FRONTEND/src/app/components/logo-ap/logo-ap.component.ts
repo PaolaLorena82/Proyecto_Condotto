@@ -20,12 +20,14 @@ export class LogoAPComponent implements OnInit {
     }
   }
 
-  onLogOut():void{
+  onLogOut(event: Event):void{
+    event.preventDefault;
     this.tokenService.logOut();
     window.location.reload();
   }
 
-  login(){
+  login(event: Event) {
+    event.preventDefault;
     this.router.navigate(['/login'])
   }
 }
