@@ -1,0 +1,23 @@
+div class="container" *ngIf="expLab">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombreHys">Nombre </label>
+                    <input type="text" class="form-control" id="nombreHys" name="nombreHys" [(ngModel)]="hys.nombreHys" required>
+                </div>
+                <div class="form-group">
+                    <label for="capacidadesHys"> Porcentaje de Capacidad</label>
+                    <input type="text" class="form-control" id="capacidadesHys" name="capacidadesHys" [(ngModel)]="hys.capacidadesHys"required>
+                </div>
+                <div class="form-group">
+                    <label for="imgHys"> Imagen </label>
+                    <input type="text" class="form-control" id="imgHys" name="imgHys" [(ngModel)]="hys.imgHys"required>
+                </div>
+                <button class="btn btn-secondary">
+                    Actualizar 
+                </button>
+            </form>
+        </div>
+    </div>
+

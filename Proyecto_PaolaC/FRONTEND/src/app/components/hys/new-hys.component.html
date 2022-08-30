@@ -1,0 +1,38 @@
+
+<div class="container mx-auto" id="fondobanner">
+    <div class="card-123 mx-auto">
+        <div class="card-header" id="alineado" *ngIf="isLogged">
+            <label>
+                <h1>Menú Hard & Soft Skills</h1>
+            </label>
+        </div>
+        <div class="card-body">
+            <div id="alineado">
+                <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                    <div>
+                        <label for="nombreS">NombreHard & Soft Skills</label>
+                        <input type="text" class="form-control" id="nombreHys" name="nombreHys" placeholder=""
+                            [(ngModel)]="nombreHys" required>
+                    </div>
+                    <div>
+                        <label for="capacidadesHys">Capacidad Hard & Soft Skills</label>
+                        <input type="number" class="form-control" id="capacidadesHys" name="capacidadesHys"
+                            [(ngModel)]="capacidadesHys" required>
+
+                    </div>
+                    
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="imgHys" id="Hard" value="hard"
+                        [(ngModel)]="imgHys" required>
+                            
+                        <label class="form-check-label" for="Soft">Soft Skill</label>
+                    </div>
+                    <div class="p-3">
+                        <button class="btn btn-success">Añadir Hard & Soft Skills</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,24 @@
+div class="container" *ngIf="expLab">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="tituloP">Nombre del Proyecto</label>
+                    <input type="text" class="form-control" id="tituloP" name=" tituloP" placeholder[(ngModel)]="proyect.tituloP" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcionE">Descripcion</label>
+                    <input type="text" class="form-control" id="descripcionP" name="descripcionP" [(ngModel)]="proyect.descripcionP" required>
+                </div>
+                <div class="form-group">
+                    <label for="img">Imagen</label>
+                    <input type="text" class="form-control" id="img" name="img" [(ngModel)]="proyect.img" required>
+                </div>
+                <button class="btn btn-secondary">
+                    Actualizar proyecto
+                </button>
+            </form>
+        </div>
+    </div>
+
+
