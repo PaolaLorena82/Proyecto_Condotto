@@ -7,7 +7,6 @@ package com.porfoliopaolac.plc.Controller;
 
 
 import com.porfoliopaolac.plc.DTO.dtoProyecto;
-
 import com.porfoliopaolac.plc.Entity.Proyecto;
 import com.porfoliopaolac.plc.Security.Controller.Mensaje;
 import com.porfoliopaolac.plc.Service.SProyecto;
@@ -28,7 +27,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/proyecto")
 public class CProyecto {
       @Autowired
