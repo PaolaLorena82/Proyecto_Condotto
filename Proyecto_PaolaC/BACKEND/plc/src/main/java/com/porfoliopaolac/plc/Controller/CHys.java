@@ -32,6 +32,8 @@ public class CHys {
       @Autowired
       
       SHyS sHyS;
+
+      @GetMapping("/lista")
       public ResponseEntity<List<HyS>> list(){
         List<HyS> list = sHyS.list();
         return new ResponseEntity(list, HttpStatus.OK);
