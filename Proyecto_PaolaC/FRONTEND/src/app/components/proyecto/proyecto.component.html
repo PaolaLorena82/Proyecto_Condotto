@@ -6,19 +6,16 @@
             Nuevo Proyecto
         </button>
     </div>
-
     <div class="col lg 1"></div>
     <div class="col-lg-11">
         <table class="table">
             <tbody>
                 <tr *ngFor="let Proyecto of proyec">
-                    <td>
-                        <h2>{{Proyecto.nombreP}}</h2>
-                    </td>
-                    <td>{{Proyecto.descripcionP}}</td>
-                    <td>{{Proyecto.img}}</td>
+                    <td><h2>{{Proyecto.nombreP}}</h2></td>
+                    <td><h4>{{Proyecto.descripcionP}}</h4></td>
+                    <td><h4>{{Proyecto.imgP}}</h4></td>
                     <td *ngIf="isLogged">
-                        <button class="btn btn-light" routerLink="/editproyec/{{Proyecto.id}}">
+                        <button class="btn btn-light" routerLink="/ediproyect/{{Proyecto.id}}">
                             <i class="bi bi-pencil-fill"></i> EDITAR</button>
                     </td>
                     <td *ngIf="isLogged">

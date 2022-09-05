@@ -11,8 +11,7 @@ import { ProyectoService } from 'src/app/service/proyecto-service';
 export class NewProyectoComponent implements OnInit {
     tituloP: string;
     descripcionP: string;
-    img: string;
-
+    imgP: string;
 
   constructor( private sProyecto : ProyectoService, private router: Router ) { }
 
@@ -20,7 +19,7 @@ export class NewProyectoComponent implements OnInit {
   }
 
   onCreate(): void{
-    const proyecto = new Proyecto(this.tituloP, this.descripcionP,this.img);
+    const proyecto = new Proyecto(this.tituloP, this.descripcionP,this.imgP);
     this.sProyecto.save(proyecto).subscribe(
       data =>{
         alert("Proyecto añadido correctamente");

@@ -12,8 +12,7 @@ export class HysComponent implements OnInit {
   hys: Hys[] = [];
   
 
-  constructor (private sHys : HysService,
-     private tokenService: TokenService) { }
+  constructor (private sHys : HysService, private tokenService: TokenService) { }
   
   isLogged = false;
   
@@ -26,7 +25,11 @@ export class HysComponent implements OnInit {
     }
   }
   cargarHys(): void {
-    this.sHys.lista().subscribe(data => {this.hys = data; })
+    this.sHys.lista().subscribe(
+      data => {
+        this.hys = data; 
+      }
+      )
   }
 
    delete(id?: number){

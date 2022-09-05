@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/proyecto")
+@RequestMapping("/proyec")
 public class CProyecto {
       @Autowired
       SProyecto sProyecto;
@@ -71,7 +71,7 @@ public class CProyecto {
         }
 
         Proyecto newproyecto = new Proyecto(
-                dtoproyecto.getTituloP(), dtoproyecto.getDescripcionP(),dtoproyecto.getImg());
+                dtoproyecto.getTituloP(), dtoproyecto.getDescripcionP(),dtoproyecto.getImgP());
            
         sProyecto.save(newproyecto);
         return new ResponseEntity(new Mensaje("Proyecto creado"), HttpStatus.OK);
@@ -94,7 +94,7 @@ public class CProyecto {
 
         proyecto.setTituloP(dtoproyecto.getTituloP());
         proyecto.setDescripcionP(dtoproyecto.getDescripcionP());
-        proyecto.setImg(dtoproyecto.getImg());
+        proyecto.setImgP(dtoproyecto.getImgP());
         
 
         sProyecto.save(proyecto);

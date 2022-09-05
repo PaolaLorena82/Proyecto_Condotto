@@ -18,7 +18,7 @@ public class Proyecto {
     private int id;
     private String tituloP;
     private String descripcionP;
-    private String img;
+    private String imgP;
     
     
     //constructores//
@@ -26,10 +26,10 @@ public class Proyecto {
     public Proyecto() {
     }
 
-    public Proyecto(String tituloP, String descripcionP, String img) {
+    public Proyecto(String tituloP, String descripcionP, String imgP) {
         this.tituloP = tituloP;
         this.descripcionP = descripcionP;
-        this.img = img;
+        this.imgP = imgP;
     }
 
     //getters and setters//
@@ -58,12 +58,12 @@ public class Proyecto {
         this.descripcionP = descripcionP;
     }
 
-    public String getImg() {
-        return img;
+    public String getImgP() {
+        return imgP;
     }
 
-    public void setImg(String img) {
-        this.img = img;
+    public void setImgP(String imgP) {
+        this.imgP = imgP;
     }
    
     

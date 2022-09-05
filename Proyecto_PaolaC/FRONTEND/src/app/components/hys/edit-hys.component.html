@@ -1,4 +1,4 @@
-div class="container" *ngIf="expLab">
+<div class="container" *ngIf="hys">
     <div class="row">
         <div>
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
@@ -14,7 +14,7 @@ div class="container" *ngIf="expLab">
                     <label for="imgHys"> Imagen </label>
                     <input type="text" class="form-control" id="imgHys" name="imgHys" [(ngModel)]="hys.imgHys"required>
                 </div>
-                <button class="btn btn-secondary">
+                <button class="btn btn-dark">
                     Actualizar 
                 </button>
             </form>

@@ -3,7 +3,7 @@
   <div class="col-lg-2">
       <button type="button" class="btn btn-secondary" routerLink="/nuevahys" *ngIf="isLogged">
           <i class="bi bi-hand-index-thumb"></i>
-          Nueva Hards && Skill
+          Agregar Hards && Skill
       </button>
   </div>
   <ul class="col-sm-4 col-md-3 col-lg-3" *ngFor="let Hys of hys">
@@ -24,7 +24,9 @@
                 [animationDuration]="300"
             ></circle-progress>
 <div>
-<button class="btn btn-outline-info" id="boton-hys" routerLink="/edithys/{{Hys.id}}" *ngIf="isLogged"><i class="bi bi-pencil-square"></i>editar</button>
-                    <button class="btn btn-outline-danger" id="boton-hys" (click)="delete(Hys.id)" *ngIf="isLogged"><i class="bi bi-trash3-fill"></i>borrar</button>          
+<button class="btn btn-light" id="boton-hys" routerLink="/edithys/{{Hys.id}}"*ngIf="isLogged">
+    <i class="bi bi-pencil-fill"></i>Editar</button>
+<button class="btn btn-dark" id="boton-hys" (click)="delete(Hys.id)" *ngIf="isLogged">
+    <i class="bi bi-trash-fill"></i>Borrar</button>          
               
                   </div>

@@ -11,32 +11,32 @@ import javax.validation.constraints.NotBlank;
 
 public class dtoExperiencia {
     @NotBlank
-    private String nombreE;
+    private String nombreEx;
     @NotBlank
-    private String descripcionE;
+    private String descripcionEx;
 
     public dtoExperiencia() {
     }
 
-    public dtoExperiencia(String nombreE, String descripcionE) {
-        this.nombreE = nombreE;
-        this.descripcionE = descripcionE;
+    public dtoExperiencia(String nombreEx, String descripcionEx) {
+        this.nombreEx = nombreEx;
+        this.descripcionEx = descripcionEx;
     }
 
-    public String getNombreE() {
-        return nombreE;
+    public String getNombreEx() {
+        return nombreEx;
     }
 
-    public void setNombreE(String nombreE) {
-        this.nombreE = nombreE;
+    public void setNombreEx(String nombreEx) {
+        this.nombreEx = nombreEx;
     }
 
-    public String getDescripcionE() {
-        return descripcionE;
+    public String getDescripcionEx() {
+        return descripcionEx;
     }
 
-    public void setDescripcionE(String descripcionE) {
-        this.descripcionE = descripcionE;
+    public void setDescripcionEx(String descripcionEx) {
+        this.descripcionEx = descripcionEx;
     }
     
     

@@ -11,9 +11,7 @@ import { TokenService } from 'src/app/service/token.service';
 export class ProyectoComponent implements OnInit {
 
   proyec: Proyecto[] = [];
-  constructor (private sProyecto : ProyectoService,
-     private tokenService: TokenService) { }
-  
+  constructor (private sProyecto : ProyectoService,private tokenService: TokenService) { }
   isLogged = false;
   
   ngOnInit(): void {
@@ -25,7 +23,11 @@ export class ProyectoComponent implements OnInit {
     }
   }
   cargarProyecto(): void {
-    this.sProyecto.lista().subscribe(data => {this.proyec = data; })
+    this.sProyecto.lista().subscribe(
+      data => {
+      this.proyec = data; 
+      }
+      )
   }
 
    delete(id?: number){

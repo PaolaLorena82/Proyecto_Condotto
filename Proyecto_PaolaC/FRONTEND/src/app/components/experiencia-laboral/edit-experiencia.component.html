@@ -3,12 +3,12 @@
         <div>
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                 <div class="form-group">
-                    <label for="nombreE">Nombre de la empresa</label>
-                    <input type="text" class="form-control" id="nombreE" name="nombreE" [(ngModel)]="expLab.nombreE" required>
+                    <label for="nombreEx">Nombre de la empresa</label>
+                    <input type="text" class="form-control" id="nombreEx" name="nombreEx" [(ngModel)]="expLab.nombreEx" required>
                 </div>
                 <div class="form-group">
-                    <label for="descripcionE">Descripcion de la tarea</label>
-                    <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="expLab.descripcionE" required>
+                    <label for="descripcionEx">Descripcion de la tarea</label>
+                    <input type="text" class="form-control" id="descripcionEx" name="descripcionEx" [(ngModel)]="expLab.descripcionEx" required>
                 </div>
                 <button class="btn btn-secondary">
                     Actualizar experiencia

@@ -3,14 +3,14 @@
     <div class="card-123 mx-auto">
         <div class="card-header" id="alineado" *ngIf="isLogged">
             <label>
-                <h1>Menú Hard & Soft Skills</h1>
+                <h1>Hard & Soft Skills</h1>
             </label>
         </div>
         <div class="card-body">
             <div id="alineado">
                 <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
                     <div>
-                        <label for="nombreS">NombreHard & Soft Skills</label>
+                        <label for="nombreHys">Nombre Hard & Soft Skills</label>
                         <input type="text" class="form-control" id="nombreHys" name="nombreHys" placeholder=""
                             [(ngModel)]="nombreHys" required>
                     </div>

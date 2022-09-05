@@ -11,7 +11,7 @@ import { Experiencia } from 'src/app/model/experiencia';
 export class ExperienciaLaboralComponent implements OnInit {
 
   expe: Experiencia[] = [];
-  constructor (private sExperiencia : SExperienciaService,
+ constructor (private sExperiencia : SExperienciaService,
      private tokenService: TokenService) { }
   
   isLogged = false;
@@ -25,7 +25,11 @@ export class ExperienciaLaboralComponent implements OnInit {
     }
   }
   cargarExperiencia(): void {
-    this.sExperiencia.lista().subscribe(data => {this.expe = data; })
+    this.sExperiencia.lista().subscribe(
+      data => {
+        this.expe = data;
+       }
+       )
   }
 
    delete(id?: number){
