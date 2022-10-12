@@ -23,10 +23,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PutMapping;
 
 @RestController
 @RequestMapping("/hys")
+@CrossOrigin(origins = "https://frontendplc-e271a.web.app")
 public class CHys {
       @Autowired
       

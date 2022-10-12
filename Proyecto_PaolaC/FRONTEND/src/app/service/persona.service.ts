@@ -7,7 +7,7 @@ import { persona } from '../model/persona.model';
   providedIn: 'root'
 })
 export class PersonaService {
-URL = 'http://proyecto-plc.herokuapp.com/personas/';
+URL = 'https://proyecto-plc.herokuapp.com/personas/';
   constructor(private http: HttpClient) {}
 
   public getPersona():Observable<persona>{
@@ -15,7 +15,7 @@ URL = 'http://proyecto-plc.herokuapp.com/personas/';
    }
 
     public findPersona():Observable<persona>{
-      return this.http.get<persona>(this.URL+`traer/perfil`);
+      return this.http.get<persona>(this.URL+'traer/perfil');
      }
 
     public save(persona: persona): Observable<any>{

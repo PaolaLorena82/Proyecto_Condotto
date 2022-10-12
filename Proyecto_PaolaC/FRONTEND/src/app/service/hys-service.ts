@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
   })
 
 export class HysService {
-    hysURL ='http://proyecto-plc.herokuapp.com/hys/';
+    hysURL ='https://proyecto-plc.herokuapp.com/hys/';
 
     constructor(private httpClient : HttpClient) { }
     public lista(): Observable<Hys[]>{
