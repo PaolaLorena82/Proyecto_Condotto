@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
     providedIn: 'root'
   })
 export class ProyectoService {
-    proURL ='https://proyecto-plc.herokuapp.com/proyec/';
+    proURL ='https://proyecto-plc.herokuapp.com/proyecto/';
 
     
     constructor(private httpClient : HttpClient) { }
@@ -18,7 +18,7 @@ export class ProyectoService {
       }
     
       public detail(id: number): Observable<Proyecto>{
-        return this.httpClient.get<Proyecto>(this.proURL + 'detail/${id}');
+        return this.httpClient.get<Proyecto>(this.proURL + `detail/${id}`);
       } 
     
       public save(proyecto: Proyecto): Observable<any>{
@@ -26,11 +26,11 @@ export class ProyectoService {
       }
     
       public update(id: number, proyecto: Proyecto): Observable<any>{
-        return this.httpClient.put<any>(this.proURL + 'update/${id}', proyecto);
+        return this.httpClient.put<any>(this.proURL + `update/${id}`, proyecto);
       }
     
       public delete(id: number): Observable<any>{
-        return this.httpClient.delete<any>(this.proURL + 'delete/${id}');
+        return this.httpClient.delete<any>(this.proURL + `delete/${id}`);
       }
     }
 

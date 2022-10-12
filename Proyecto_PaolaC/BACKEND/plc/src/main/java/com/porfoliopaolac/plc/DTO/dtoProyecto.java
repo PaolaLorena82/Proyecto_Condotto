@@ -8,10 +8,7 @@ package com.porfoliopaolac.plc.DTO;
 
 import javax.validation.constraints.NotBlank;
 
-/**
- *
- * @author Pao
- */
+
 public class dtoProyecto {
     @NotBlank
     private String tituloP;
