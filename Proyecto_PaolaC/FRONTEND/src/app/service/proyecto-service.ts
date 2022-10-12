@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
     providedIn: 'root'
   })
 export class ProyectoService {
-    proURL ='https://proyecto-plc.herokuapp.com/proyecto/';
+    proURL ='http://proyecto-plc.herokuapp.com/proyecto/';
 
     
     constructor(private httpClient : HttpClient) { }
