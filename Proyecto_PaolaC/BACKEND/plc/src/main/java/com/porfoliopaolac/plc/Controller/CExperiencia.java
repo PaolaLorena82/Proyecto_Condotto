@@ -54,7 +54,7 @@ public class CExperiencia {
         return new ResponseEntity(new Mensaje("Experiencia Eliminada"), HttpStatus.OK);
     }
    
-  
+  @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody dtoExperiencia dtoexperiencia) {
         if (StringUtils.isBlank(dtoexperiencia.getNombreEx())) 
