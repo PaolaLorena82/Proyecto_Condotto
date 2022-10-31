@@ -53,7 +53,7 @@ public class CExperiencia {
         sExperiencia.delete(id);
         return new ResponseEntity(new Mensaje("Experiencia Eliminada"), HttpStatus.OK);
     }
-    
+   
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody dtoExperiencia dtoexperiencia) {
@@ -64,11 +64,15 @@ public class CExperiencia {
             return new ResponseEntity(new Mensaje("Experiencia existe"), HttpStatus.BAD_REQUEST);
         
 
-        Experiencia experiencia = new Experiencia(dtoexperiencia.getNombreEx(), dtoexperiencia.getDescripcionEx());
+        Experiencia experiencia = new Experiencia
+        (dtoexperiencia.getNombreEx(), dtoexperiencia.getDescripcionEx());
         sExperiencia.save(experiencia);
 
-        return new ResponseEntity(new Mensaje("Experiencia agregada"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Experiencia creada"), HttpStatus.OK);
 }
+  
+
+
     
     @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/update/{id}")
@@ -87,10 +91,12 @@ public class CExperiencia {
         
 
         Experiencia experiencia = sExperiencia.getOne(id).get();
+        
         experiencia.setNombreEx(dtoexperiencia.getNombreEx());
         experiencia.setDescripcionEx(dtoexperiencia.getDescripcionEx());
 
         sExperiencia.save(experiencia);
+        
         return new ResponseEntity(new Mensaje("Experiencia actualizada"), HttpStatus.OK);
 
     }
